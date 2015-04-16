@@ -1,0 +1,11 @@
+-- run file contain our script
+dofile("hcsr04.lua")
+-- run function init and return self local vatiable
+device = hcsr04.init()
+
+-- print measure every 500 ms
+-- first argument is alarm id
+-- secend one is call interval
+-- third declare how much time function() must repeat
+-- forth one declare function we want call
+tmr.alarm(0, 500, 1, function() print(device.measure()) end)
