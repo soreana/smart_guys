@@ -1,0 +1,63 @@
+hcsr04 = {};
+
+-- add function init to abject hcsr04
+function hcsr04.init(pin_trig, pin_echo)
+
+     -- crate local object self
+     -- at the and return this object
+     local self = {}
+     
+     -- every arithmatic type in Lua is float
+     self.time_start = 0
+     self.time_end = 0
+     
+     -- if you aren't provide argument
+     -- use pin 4 ( GPIO2 in Pin map ) for
+     -- trig and pin 3 ( GPIO0 in pin map )
+     -- for echo
+     self.trig = pin_trig or 4
+     self.echo = pin_echo or 3
+     
+     -- make trig pin mode OUTPUT
+     gpio.mode(self.trig, gpio.OUTPUT)
+     -- make echo pin mode Interrupt
+     gpio.mode(self.echo, gpio.INT)
+
+     function self.echo_cb(level)
+          -- I think this 1 means up
+          if level == 1 then
+               self.time_start = tmr.now()
+               -- remove intrupt function
+               gpio.trig(self.echo, "down")
+          else
+               self.time_end = tmr.now()
+          end
+     end
+
+     function self.measure()
+
+          -- define what heppened when come back from
+          -- interrupt. when rising edge (up) happend
+          -- we call function self.echo_cb
+          gpio.trig(self.echo, "up", self.echo_cb)
+          
+          -- write HIGH value in pin trig
+          gpio.write(self.trig, gpio.HIGH)
+
+          -- wait
+          tmr.delay(100)
+
+          -- write law int trig
+          gpio.write(self.trig, gpio.LOW)
+
+          -- wait
+          tmr.delay(100000)
+
+          -- this if else is crystal clear
+          if (self.time_end - self.time_start) < 0 then
+               return -1
+          end
+          return (self.time_end - self.time_start) / 58
+     end
+     return self
+end
