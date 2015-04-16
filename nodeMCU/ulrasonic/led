@@ -1,0 +1,11 @@
+gpio.mode( 3 , gpio.OUTPUT )
+
+gpio.write( 3 , gpio.HIGH )
+tmr.delay( 1000 )
+gpio.write( 3 , gpio.LOW )
+tmr.delay( 1000 )
+
+gpio.mode( 4 , gpio.OUTPUT )
+gpio.write( 4 , gpio.HIGH )
+tmr.delay( 1000 )
+gpio.write( 4 , gpio.LOW )
