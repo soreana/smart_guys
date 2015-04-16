@@ -1,0 +1,11 @@
+-- program initialization
+conn=net.createConnection(net.TCP, false)
+conn:on("receive", function(conn, pl) print(pl) end)
+
+-- here we tell nodeMCU where to connect
+conn:connect(9000,"192.168.43.134")
+
+-- conquer parking number 1 in play server
+-- only modify /conquer?parkingNum=1 for connecting node.js server
+conn:send("GET /conquer?parkingNum=1 HTTP/1.1\r\nHost: www.nodemcu.com\r\n"
+    .."Connection: keep-alive\r\nAccept: */*\r\n\r\n")
