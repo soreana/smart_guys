@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/All-My-Files/documents/education/ut/cecm/ie/ParkooshLocal/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="/All-My-Files/documents/education/ut/cecm/ie/ParkooshLocal/app/build/intermediates/pre-dexed/debug/classes-6f6b9c30840e5fda597f5140111455f5c7acebfc.jar" />
+    </item>
+    <item
+        jar="/All-My-Files/documents/education/ut/cecm/ie/ParkooshLocal/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="/All-My-Files/documents/education/ut/cecm/ie/ParkooshLocal/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-a7517c4802f8cc0c9fbe28f4703e0622907cff6d.jar" />
+    </item>
+    <item
+        jar="/Users/Moez/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="/All-My-Files/documents/education/ut/cecm/ie/ParkooshLocal/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-82cb8b5aa56ec861e67c2bf9d9cc2ac0aa1a5455.jar" />
+    </item>
+    <item
+        jar="/All-My-Files/documents/education/ut/cecm/ie/ParkooshLocal/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136">
+        <dex dex="/All-My-Files/documents/education/ut/cecm/ie/ParkooshLocal/app/build/intermediates/pre-dexed/debug/classes-68da39bbb206e11449a99a85fde4c515d4e72bd1.jar" />
+    </item>
+
+</items>
